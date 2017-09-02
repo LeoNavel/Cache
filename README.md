@@ -1,12 +1,11 @@
 ![Cache](https://github.com/hyperoslo/Cache/blob/master/Resources/CachePresentation.png)
 
-[![CI Status](http://img.shields.io/travis/hyperoslo/Cache.svg?style=flat)](https://travis-ci.org/hyperoslo/Cache)
-[![Version](https://img.shields.io/cocoapods/v/Cache.svg?style=flat)](http://cocoadocs.org/docsets/Cache)
-[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![License](https://img.shields.io/cocoapods/l/Cache.svg?style=flat)](http://cocoadocs.org/docsets/Cache)
-[![Platform](https://img.shields.io/cocoapods/p/Cache.svg?style=flat)](http://cocoadocs.org/docsets/Cache)
-[![Documentation](https://img.shields.io/cocoapods/metrics/doc-percent/Cache.svg?style=flat)](http://cocoadocs.org/docsets/Cache)
-![Swift](https://img.shields.io/badge/%20in-swift%203.0-orange.svg)
+[![CircleCI](https://img.shields.io/circleci/project/github/RedSparr0w/node-csgo-parser.svg)](https://circleci.com/gh/LeoNavel/Cache)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE)
+[![platform](
+https://img.shields.io/badge/Platforms-OS_X%20%7C_Linux-lightgray.svg?style=flat)](https://developer.apple.com/swift/)
+[![SPM](https://img.shields.io/badge/spm-Compatible-brightgreen.svg)](https://swift.org)
+[![swift](https://img.shields.io/badge/swift-4.0-orange.svg)](https://developer.apple.com/swift/)
 
 ## Table of Contents
 
