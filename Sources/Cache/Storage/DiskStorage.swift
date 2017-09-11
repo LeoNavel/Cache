@@ -38,7 +38,7 @@ final class DiskStorage: StorageAware {
 
         do {
             if let cacheDirectory = cacheDirectory {
-                path = cacheDirectory
+                path = cacheDirectory + "/" + name
             } else {
                 #if os(Linux)
                     let url = URL(fileURLWithPath: fileManager.currentDirectoryPath + "/.cache")
