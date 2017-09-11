@@ -20,7 +20,8 @@ class MacTests: XCTestCase {
     }
 
     func testArray() {
-        let cache = SpecializedCache<CacheArray<String>>(name: "StringArrayCache")
+        let config = Config(expiry: .seconds(30), cacheDirectory: "/tmp/.cache/")
+        let cache = SpecializedCache<CacheArray<String>>(name: "StringArrayCache", config: config)
         XCTAssertNoThrow(try cache.clear(keepingRootDirectory: true))
         XCTAssertNil(cache.object(forKey: "A"))
         XCTAssertNoThrow(try cache.addObject(CacheArray<String>(elements: ["1", "2"]), forKey: "A"))
@@ -37,5 +38,5 @@ class MacTests: XCTestCase {
     static var allTests = [
         ("testExample", testExample),
         ("testArray", testArray)
-        ]
+    ]
 }
