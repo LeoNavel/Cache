@@ -54,8 +54,17 @@ jobs:
     <<: *default_docker
     steps:
       - checkout
-      - attach_workspace:
-          at: .build
+      # - attach_workspace:
+      #     at: .build
+      - run:
+          name: Run unit tests
+          command: swift test
+test_parallel:
+    <<: *default_docker
+    steps:
+      - checkout
+      # - attach_workspace:
+      #     at: .build
       - run:
           name: Run unit tests
           command: swift test --parallel
@@ -64,14 +73,5 @@ workflows:
   version: 2
   resolve_build_test:
     jobs:
-      - resolve
-      - build_debug:
-          requires:
-            - resolve
-      - build_release:
-          requires:
-            - resolve
-      - test:
-          requires:
-            - build_debug
-            - build_release
+      - test
+      - test_parallel
