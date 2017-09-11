@@ -59,7 +59,7 @@ jobs:
       - run:
           name: Run unit tests
           command: swift test
-test_parallel:
+  test_parallel:
     <<: *default_docker
     steps:
       - checkout
