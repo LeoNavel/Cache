@@ -191,9 +191,15 @@ final class DiskStorage: StorageAware {
             guard fileManager.fileExists(atPath: url.absoluteString, isDirectory: &isDir) else {
                 continue
             }
-            guard isDir.boolValue == false else {
-                continue
-            }
+            #if os(Linux)
+                guard isDir == false else {
+                    continue
+                }
+            #else
+                guard isDir.boolValue == false else {
+                    continue
+                }
+            #endif
 
             #if os(Linux)
                 var stat_struct = stat()
