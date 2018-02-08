@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "Cache",
+    name: "SquirrelCache",
     products: [
         .library(
             name: "Cache",
