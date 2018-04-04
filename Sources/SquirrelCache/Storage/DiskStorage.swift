@@ -192,7 +192,7 @@ final class DiskStorage: StorageAware {
                 continue
             }
             #if os(Linux)
-                guard Bool(isDir) == false else {
+                guard isDir.description == "false" else {
                     continue
                 }
             #else
