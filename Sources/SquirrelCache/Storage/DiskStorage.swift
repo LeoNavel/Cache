@@ -192,7 +192,7 @@ final class DiskStorage: StorageAware {
                 continue
             }
             #if os(Linux)
-                guard isDir == false else {
+                guard Bool(isDir) == false else {
                     continue
                 }
             #else
