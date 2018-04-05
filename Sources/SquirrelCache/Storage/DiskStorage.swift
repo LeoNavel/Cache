@@ -252,6 +252,7 @@ final class DiskStorage: StorageAware {
             #else
                 let matchc = gt.gl_matchc
             #endif
+            #if swift(>=4.1)
             return (0..<Int(matchc)).compactMap { index in
                 if let path = String(validatingUTF8: gt.gl_pathv[index]!) {
                     return URL(fileURLWithPath: path)
@@ -259,6 +260,15 @@ final class DiskStorage: StorageAware {
 
                 return nil
             }
+            #else
+            return (0..<Int(matchc)).flatMap { index in
+                if let path = String(validatingUTF8: gt.gl_pathv[index]!) {
+                    return URL(fileURLWithPath: path)
+                }
+
+                return nil
+            }
+            #endif
         }
 
         // GLOB_NOMATCH
